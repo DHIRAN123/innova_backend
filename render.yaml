@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: innovatiview-backend
+    env: java
+    buildCommand: ./mvnw clean package
+    startCommand: java -jar target/Innovatiview-0.0.1-SNAPSHOT.jar
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:mysql://b4yqvxzwx31ldyx9yqfg-mysql.services.clever-cloud.com:3306/b4yqvxzwx31ldyx9yqfg?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC
+      - key: SPRING_DATASOURCE_USERNAME
+        value: uxwby1i2oks6qe3v
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: SktciM5AJFQhw6B8fLkk
+      - key: SPRING_DATASOURCE_DRIVER_CLASS_NAME
+        value: com.mysql.cj.jdbc.Driver
+      - key: SPRING_MAIL_HOST
+        value: smtp.gmail.com
+      - key: SPRING_MAIL_PORT
+        value: "587"
+      - key: SPRING_MAIL_USERNAME
+        value: nishu777777@gmail.com
+      - key: SPRING_MAIL_PASSWORD
+        value: nlmbhrurytrynopw
+      - key: SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH
+        value: "true"
+      - key: SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE
+        value: "true"
+      - key: SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_REQUIRED
+        value: "true"
+      - key: SPRING_MAIL_PROPERTIES_MAIL_SMTP_SSL_TRUST
+        value: smtp.gmail.com
+      - key: SPRING_SECURITY_ENABLED
+        value: "false"
